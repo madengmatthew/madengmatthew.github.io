@@ -45,7 +45,11 @@ section { margin-bottom: 30px; }
 .entry > p:last-child { margin-bottom: 0; }
 .project-links { font-size: 14px; margin: 3px 0 6px; }
 .project-links span { margin: 0 7px; color: #888; }
-footer { padding-top: 15px; border-top: 1px solid var(--line); color: #777; font-size: 12px; }
+.site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 11px; border-top: 1px solid var(--line); color: #777; font-size: 12px; }
+.contact-links { display: flex; align-items: center; gap: 6px; }
+.contact-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: #555; }
+.contact-links a:hover { color: var(--link); }
+.contact-links svg { display: block; width: 21px; height: 21px; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 10; padding: 7px 13px; color: #fff; background: #222; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 @media (max-width: 620px) {
@@ -61,6 +65,7 @@ footer { padding-top: 15px; border-top: 1px solid var(--line); color: #777; font
   .date { font-size: 13px; }
   .entry-heading .date { order: 2; }
   .affiliation { margin-bottom: 17px; font-size: 14px; }
+  .affiliation + p { clear: both; }
   section { margin-bottom: 27px; }
 }
 @media print {

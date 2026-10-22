@@ -2,7 +2,7 @@
 
 Personal academic homepage: <https://madengmatthew.github.io/>
 
-A compact, single-column page with background, research interests, experience, projects, education, a portrait, and a GitHub link in the upper-right corner. Built with HTML and CSS, with no dependencies or JavaScript.
+A compact, single-column page with background, research interests, experience, projects, education, a portrait, a CV link, and contact icons. The upper-right GitHub link is retained. Built with HTML and CSS, with no dependencies or JavaScript.
 
 The editor project includes a static before/after example of the `sw` command.
 
@@ -12,6 +12,7 @@ The editor project includes a static before/after example of the `sw` command.
 - `styles.css`: desktop, mobile, and print layouts.
 - `favicon.svg`: browser tab icon.
 - `assets/portrait.jpg`: profile photo.
+- `assets/Jiale_Li_CV.pdf`: public English CV, with the phone number omitted.
 - `404.html`, `robots.txt`, `sitemap.xml`: hosting support.
 - `.nojekyll`: serves the static files directly.
 
