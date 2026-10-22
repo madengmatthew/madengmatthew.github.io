@@ -15,24 +15,28 @@
   <meta property="og:description" content="Data science undergraduate. Exploring data, algorithms, and reliable LLM agents.">
   <meta property="og:url" content="https://madengmatthew.github.io/">
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Person","name":"Jiale Li","alternateName":"李家乐","url":"https://madengmatthew.github.io/","sameAs":["https://github.com/madengmatthew"],"affiliation":{"@type":"CollegeOrUniversity","name":"The Chinese University of Hong Kong, Shenzhen"},"knowsAbout":["Data analysis","Algorithms","LLM agents","Python","SQL"]}
+    {"@context":"https://schema.org","@type":"Person","name":"Jiale Li","url":"https://madengmatthew.github.io/","sameAs":["https://github.com/madengmatthew"],"affiliation":{"@type":"CollegeOrUniversity","name":"The Chinese University of Hong Kong, Shenzhen"},"knowsAbout":["Data analysis","Algorithms","LLM agents","Python","SQL"]}
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <nav class="site-nav" aria-label="Page sections">
-      <a href="#about">About</a>
-      <a href="#interests">Interests</a>
-      <a href="#experience">Experience</a>
-      <a href="#work">Projects</a>
-      <a href="#education">Education</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="nav-sections">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Projects</a>
+        <a href="#education">Education</a>
+      </div>
+      <a class="github-link" href="https://github.com/madengmatthew">GitHub</a>
     </nav>
   </header>
 
   <main id="main" class="page" tabindex="-1">
     <section id="about" aria-labelledby="name">
-      <h1 id="name">Jiale Li <span lang="zh-Hans">李家乐</span></h1>
+      <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Jiale Li" width="160" height="160" decoding="async">
+      <h1 id="name">Jiale Li</h1>
       <p class="affiliation">The Chinese University of Hong Kong, Shenzhen</p>
       <p>I am a second-year undergraduate in the School of Data Science at <a href="https://www.cuhk.edu.cn/en">CUHK-Shenzhen</a>.</p>
     </section>
@@ -72,6 +76,23 @@
         <h3>Console Text Editor</h3>
         <p class="project-links"><a href="https://github.com/madengmatthew/console-text-editor">Code</a> <span aria-hidden="true">·</span> <a href="https://github.com/madengmatthew/console-text-editor#readme">Documentation</a></p>
         <p>A Python terminal editor with multiline editing, character and word navigation, text insertion and deletion, word swapping, and line reordering. Uses only the standard library; text is kept in memory.</p>
+        <figure class="editor-example">
+          <div class="editor-example-states">
+            <div class="editor-example-document">
+              <span class="editor-example-label">Before</span>
+              <pre><code><mark>H</mark>ello world</code></pre>
+            </div>
+            <div class="editor-example-command">
+              <span class="editor-example-label">Command</span>
+              <code>sw</code>
+            </div>
+            <div class="editor-example-document">
+              <span class="editor-example-label">After</span>
+              <pre><code>world <mark>H</mark>ello</code></pre>
+            </div>
+          </div>
+          <figcaption><code>sw</code> swaps adjacent words. The highlighted character is the cursor.</figcaption>
+        </figure>
       </article>
     </section>
 
@@ -84,11 +105,9 @@
         </div>
         <p class="organization">School of Data Science · Undergraduate</p>
       </article>
-      <p class="skills"><strong>Skills:</strong> Python, SQL, Excel.</p>
     </section>
 
-    <p class="contact"><a href="https://github.com/madengmatthew">GitHub</a></p>
-    <footer>© 2026 Jiale Li <span lang="zh-Hans">李家乐</span></footer>
+    <footer>© 2026 Jiale Li</footer>
   </main>
 </body>
 </html>

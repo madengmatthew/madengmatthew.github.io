@@ -21,13 +21,16 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
 p { margin: 0 0 12px; }
 h1, h2, h3 { color: #171717; }
 h1 { margin: 0 0 4px; font-size: 36px; line-height: 1.3; font-weight: 600; letter-spacing: -.7px; }
-h1 span { margin-left: 12px; color: #555; font-size: 22px; font-weight: 400; letter-spacing: 0; white-space: nowrap; }
 h2 { margin: 0 0 14px; font-size: 25px; line-height: 1.35; font-weight: 500; letter-spacing: -.3px; }
 h3 { margin: 0; font-size: 16px; line-height: 1.65; font-weight: 600; }
 .site-header { border-bottom: 1px solid var(--line); }
-.site-nav { width: min(100% - 48px, 850px); margin: 0 auto; padding: 9px 0; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 0 24px; }
+.site-nav { width: min(100% - 48px, 850px); margin: 0 auto; padding: 9px 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 36px; color: #444; font-size: 14px; }
 .site-nav a:hover { color: var(--link); }
+.nav-sections { display: flex; flex-wrap: wrap; gap: 0 24px; }
+.site-nav .github-link { flex-shrink: 0; color: var(--link); }
+#about { display: flow-root; }
+.portrait { float: right; display: block; width: 160px; height: auto; margin: 0 0 12px 28px; }
 .page { width: min(100% - 48px, 850px); margin: 43px auto 30px; }
 .page:focus { outline: none; }
 section { margin-bottom: 30px; }
@@ -42,20 +45,17 @@ section { margin-bottom: 30px; }
 .entry > p:last-child { margin-bottom: 0; }
 .project-links { font-size: 14px; margin: 3px 0 6px; }
 .project-links span { margin: 0 7px; color: #888; }
-.skills { margin-top: 16px; }
-.skills strong { font-weight: 600; }
-.contact { margin: 4px 0 28px; }
 footer { padding-top: 15px; border-top: 1px solid var(--line); color: #777; font-size: 12px; }
-footer span { margin-left: 4px; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 10; padding: 7px 13px; color: #fff; background: #222; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 @media (max-width: 620px) {
   body { font-size: 15px; line-height: 1.7; }
-  .site-nav { width: calc(100% - 36px); justify-content: flex-start; column-gap: 21px; padding: 6px 0; }
+  .site-nav { width: calc(100% - 36px); gap: 18px; padding: 6px 0; }
+  .nav-sections { column-gap: 18px; }
+  .portrait { width: 140px; margin-left: 24px; }
   .site-nav a { font-size: 13px; min-height: 38px; }
   .page { width: calc(100% - 40px); margin-top: 27px; }
   h1 { font-size: 30px; }
-  h1 span { font-size: 19px; margin-left: 9px; }
   h2 { font-size: 23px; }
   .entry-heading { flex-direction: column; gap: 1px; }
   .date { font-size: 13px; }
@@ -71,4 +71,80 @@ footer span { margin-left: 4px; }
   h2 { font-size: 17pt; }
   a { color: inherit; text-decoration: underline; }
   .entry { break-inside: avoid; }
+}
+
+@media (max-width: 420px) {
+  .portrait { width: 104px; margin-left: 18px; }
+}
+
+.editor-example {
+  margin: 20px 0;
+}
+
+.editor-example-states {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+}
+
+.editor-example-document {
+  min-width: 0;
+  padding: 12px 16px;
+  border: 1px solid #dedede;
+}
+
+.editor-example-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.editor-example pre {
+  margin: 0;
+  color: #222;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.editor-example code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.editor-example mark {
+  padding: 0;
+  color: inherit;
+  background: #e5e5e5;
+  box-shadow: inset 0 -1px #555;
+}
+
+.editor-example-command {
+  text-align: center;
+  font-size: 15px;
+}
+
+.editor-example figcaption {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .editor-example-states {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .editor-example-command {
+    text-align: left;
+  }
+
+  .editor-example-command .editor-example-label {
+    display: inline;
+    margin-right: 8px;
+  }
 }
