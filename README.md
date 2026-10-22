@@ -37,7 +37,7 @@ Responsive CSS has three breakpoints:
 | Maximum viewport width | Adjustment |
 | --- | --- |
 | **620px** | Smaller page margins and portrait; navigation wraps; entry dates move below titles. |
-| **480px** | The editor example changes from three columns to a vertical arrangement. |
+| **480px** | The editor's commands and final document change from two columns to a vertical arrangement. |
 | **420px** | The portrait reduces to 104px wide. |
 
 Print styles hide navigation, use the available page width, underline links, and avoid splitting individual entries when possible.
@@ -46,15 +46,21 @@ Accessibility features include semantic headings and page landmarks, a keyboard-
 
 ## Project example
 
-The Console Text Editor section contains a **static before/after illustration** of its `sw` command:
+The Console Text Editor section explains navigation, text and word operations, multiline editing, command dispatch, cursor state, and local use. A **static five-command example** illustrates an editing session:
 
 ```text
-Before:   Hello world
-Command:  sw
-After:    world Hello
+iHello world
+sw
+o
+iSecond line
+J
+
+Final document:
+Second line
+world Hello
 ```
 
-The highlighted `H` represents the cursor before and after the swap. The example does not execute Python or accept input in the browser; the project links lead to its source code and documentation.
+The highlighted `S` marks the final cursor position. The sequence is checked against `editor.py`; the example does not execute Python or accept input in the browser. Project links lead to the source code and full command reference.
 
 ## Local preview
 
