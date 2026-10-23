@@ -46,7 +46,7 @@ Accessibility features include semantic headings and page landmarks, a keyboard-
 
 ## Project example
 
-The Console Text Editor section explains navigation, text and word operations, multiline editing, command dispatch, cursor state, and local use. A **static five-command example** illustrates an editing session:
+The Console Text Editor section explains navigation, text and word operations, multiline editing, command dispatch, cursor state, and local use. The editing session, implementation, and local-use notes are native HTML `details`/`summary` sections, collapsed by default and independently expandable by mouse, touch, or keyboard. No JavaScript is needed. A **static five-command example** illustrates an editing session:
 
 ```text
 iHello world

@@ -86,33 +86,39 @@
           <li><strong>Word operations:</strong> use <code>sw</code> or <code>sb</code> to swap the current word with its next or previous neighbor.</li>
           <li><strong>Multiline editing:</strong> add lines with <code>o</code> and <code>O</code>, delete a line with <code>dd</code>, and move whole lines with <code>J</code> and <code>K</code>.</li>
         </ul>
-        <h4>A short editing session</h4>
-        <figure class="editor-example">
-          <div class="editor-session">
-            <div>
-              <span class="editor-example-label">Commands, in order</span>
-              <ol class="editor-steps">
-                <li><code>iHello world</code><span>Insert the first line.</span></li>
-                <li><code>sw</code><span>Swap the two words.</span></li>
-                <li><code>o</code><span>Open a line below.</span></li>
-                <li><code>iSecond line</code><span>Insert the second line.</span></li>
-                <li><code>J</code><span>Move that line up.</span></li>
-              </ol>
-            </div>
-            <div class="editor-example-document">
-              <span class="editor-example-label">Final document</span>
-              <pre><code><mark>S</mark>econd line
+        <details class="project-detail">
+          <summary>A short editing session</summary>
+          <figure class="editor-example">
+            <div class="editor-session">
+              <div>
+                <span class="editor-example-label">Commands, in order</span>
+                <ol class="editor-steps">
+                  <li><code>iHello world</code><span>Insert the first line.</span></li>
+                  <li><code>sw</code><span>Swap the two words.</span></li>
+                  <li><code>o</code><span>Open a line below.</span></li>
+                  <li><code>iSecond line</code><span>Insert the second line.</span></li>
+                  <li><code>J</code><span>Move that line up.</span></li>
+                </ol>
+              </div>
+              <div class="editor-example-document">
+                <span class="editor-example-label">Final document</span>
+                <pre><code><mark>S</mark>econd line
 world Hello</code></pre>
+              </div>
             </div>
-          </div>
-          <figcaption>Starting from an empty document. The highlighted <code>S</code> marks the cursor after the last command.</figcaption>
-        </figure>
-        <h4>Implementation</h4>
-        <p>The document is stored as a list of strings, with separate row and column positions for the cursor. Input is classified as a command, a command with text, or a line number; dispatch dictionaries then call the corresponding editing function.</p>
-        <p>Regular expressions identify words as runs of non-whitespace characters, providing the boundaries for navigation, deletion, and swapping. ANSI escape sequences highlight the current character, and an optional <code>*</code> marker identifies the active line.</p>
-        <h4>Try it locally</h4>
-        <p>Download <a href="https://github.com/madengmatthew/console-text-editor/blob/main/editor.py"><code>editor.py</code></a> and run <code>python3 editor.py</code> in a terminal. Enter one command at each <code>&gt;</code> prompt and press Enter. Put text directly after insertion commands, as in <code>iHello world</code>. Use <code>?</code> for help and <code>q</code> to quit.</p>
-        <p class="project-note">Text is stored in memory only. File loading and saving, and undo/redo, are not implemented.</p>
+            <figcaption>Starting from an empty document. The highlighted <code>S</code> marks the cursor after the last command.</figcaption>
+          </figure>
+        </details>
+        <details class="project-detail">
+          <summary>Implementation</summary>
+          <p>The document is stored as a list of strings, with separate row and column positions for the cursor. Input is classified as a command, a command with text, or a line number; dispatch dictionaries then call the corresponding editing function.</p>
+          <p>Regular expressions identify words as runs of non-whitespace characters, providing the boundaries for navigation, deletion, and swapping. ANSI escape sequences highlight the current character, and an optional <code>*</code> marker identifies the active line.</p>
+        </details>
+        <details class="project-detail">
+          <summary>Try it locally</summary>
+          <p>Download <a href="https://github.com/madengmatthew/console-text-editor/blob/main/editor.py"><code>editor.py</code></a> and run <code>python3 editor.py</code> in a terminal. Enter one command at each <code>&gt;</code> prompt and press Enter. Put text directly after insertion commands, as in <code>iHello world</code>. Use <code>?</code> for help and <code>q</code> to quit.</p>
+          <p class="project-note">Text is stored in memory only. File loading and saving, and undo/redo, are not implemented.</p>
+        </details>
       </article>
     </section>
 

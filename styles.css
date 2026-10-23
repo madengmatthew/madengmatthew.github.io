@@ -50,6 +50,12 @@ section { margin-bottom: 30px; }
 .project-features li { margin-bottom: 6px; }
 .project code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .9em; }
 .project .project-note { color: var(--muted); font-size: 14px; }
+.project-detail { margin-top: 8px; }
+.project-detail > summary { min-height: 44px; padding: 10px 0; cursor: pointer; font-size: 15px; line-height: 1.5; font-weight: 600; }
+.project-detail > summary::marker { color: var(--muted); }
+.project-detail > summary:hover { color: var(--link); }
+.project-detail > summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+.project-detail[open] > summary { margin-bottom: 4px; }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 11px; border-top: 1px solid var(--line); color: #777; font-size: 12px; }
 .contact-links { display: flex; align-items: center; gap: 6px; }
 .contact-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: #555; }
