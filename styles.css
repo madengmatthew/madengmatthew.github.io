@@ -31,11 +31,12 @@ h3 { margin: 0; font-size: 17px; line-height: 1.65; font-weight: 600; }
 .nav-sections { display: flex; flex-wrap: wrap; gap: 0 24px; min-width: 0; }
 .nav-actions { display: flex; align-items: center; gap: 18px; white-space: nowrap; }
 .site-nav .nav-actions a { flex-shrink: 0; color: var(--link); }
-#about { display: grid; grid-template-columns: minmax(0, 1fr) 160px; column-gap: 32px; align-items: start; }
-.about-copy { min-width: 0; }
+#about { display: grid; grid-template-columns: minmax(0, 1fr) 160px; grid-template-areas: "heading ." "bio portrait"; gap: 20px 32px; align-items: start; }
+.about-copy { display: contents; }
+.about-heading { grid-area: heading; min-width: 0; }
 .about-heading .affiliation { margin: 0; }
-.about-bio { margin-top: 20px; text-align: justify; hyphens: auto; }
-.portrait { display: block; width: 160px; height: auto; }
+.about-bio { grid-area: bio; min-width: 0; text-align: justify; hyphens: auto; }
+.portrait { grid-area: portrait; align-self: center; display: block; width: 160px; height: auto; }
 .page { width: min(100% - 48px, 850px); margin: 48px auto 34px; }
 .page:focus { outline: none; }
 .page > section { margin: 0; }
@@ -81,11 +82,9 @@ h3 { margin: 0; font-size: 17px; line-height: 1.65; font-weight: 600; }
   .site-nav { width: calc(100% - 36px); gap: 16px; padding: 6px 0; }
   .nav-sections { column-gap: 16px; }
   .nav-actions { gap: 12px; }
-  #about { grid-template-columns: minmax(0, 1fr) 140px; column-gap: 24px; }
-  .about-copy { display: contents; }
-  .about-heading { grid-column: 1; grid-row: 1; }
-  .about-bio { grid-column: 1 / -1; grid-row: 2; text-align: left; hyphens: none; }
-  .portrait { grid-column: 2; grid-row: 1; width: 140px; }
+  #about { grid-template-columns: minmax(0, 1fr) 140px; grid-template-areas: "heading portrait" "bio bio"; column-gap: 24px; }
+  .about-bio { text-align: left; hyphens: none; }
+  .portrait { align-self: start; width: 140px; }
   .site-nav a { font-size: 13px; min-height: 38px; }
   .page { width: calc(100% - 40px); margin-top: 27px; }
   h1 { font-size: 30px; }

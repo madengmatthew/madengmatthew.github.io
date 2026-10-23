@@ -30,7 +30,7 @@ GitHub Pages serves the repository's static files directly from the **root of th
 
 ## Layout and accessibility
 
-The homepage uses a single main content column, a wrapping top navigation, and contact links in the footer. The main content is limited to 850px on wider screens. The introduction uses two columns: justified biography text on the left and a portrait on the right. Main sections use fine separators and larger spacing; stronger section headings, lighter separators between experience entries, and compact disclosure rows distinguish the levels of content.
+The homepage uses a single main content column, a wrapping top navigation, and contact links in the footer. The main content is limited to 850px on wider screens. The introduction uses two columns: justified biography text on the left and a portrait on the right, vertically centered alongside the biography paragraphs. Main sections use fine separators and larger spacing; stronger section headings, lighter separators between experience entries, and compact disclosure rows distinguish the levels of content.
 
 GitHub and Feedback stay together at the upper right of the navigation. Feedback uses a `mailto:` link with the recipient and a website-feedback subject prefilled. It opens the visitor's configured mail application; the visitor writes and sends the message there.
 
