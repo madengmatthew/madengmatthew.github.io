@@ -36,7 +36,7 @@ h3 { margin: 0; font-size: 17px; line-height: 1.65; font-weight: 600; }
 .about-heading { grid-area: heading; min-width: 0; }
 .about-heading .affiliation { margin: 0; }
 .about-bio { grid-area: bio; min-width: 0; text-align: justify; hyphens: auto; }
-.portrait { grid-area: portrait; align-self: center; display: block; width: 160px; height: auto; }
+.portrait { grid-area: portrait; align-self: start; display: block; width: 160px; height: auto; }
 .page { width: min(100% - 48px, 850px); margin: 48px auto 34px; }
 .page:focus { outline: none; }
 .page > section { margin: 0; }
