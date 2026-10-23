@@ -25,18 +25,22 @@ h1 { margin: 0 0 4px; font-size: 36px; line-height: 1.3; font-weight: 600; lette
 h2 { margin: 0 0 20px; color: #1f2b3a; font-size: 25px; line-height: 1.35; font-weight: 600; letter-spacing: -.4px; }
 h3 { margin: 0; font-size: 17px; line-height: 1.65; font-weight: 600; }
 .site-header { border-bottom: 1px solid var(--line); }
-.site-nav { width: min(100% - 48px, 850px); margin: 0 auto; padding: 9px 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.site-nav { width: min(100% - 48px, 850px); margin: 0 auto; padding: 9px 0; display: grid; grid-template-columns: minmax(0, 1fr) max-content; align-items: start; gap: 24px; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 36px; color: #444; font-size: 14px; }
 .site-nav a:hover { color: var(--link); }
-.nav-sections { display: flex; flex-wrap: wrap; gap: 0 24px; }
-.site-nav .github-link { flex-shrink: 0; color: var(--link); }
-#about { display: flow-root; }
-.portrait { float: right; display: block; width: 160px; height: auto; margin: 0 0 12px 28px; }
+.nav-sections { display: flex; flex-wrap: wrap; gap: 0 24px; min-width: 0; }
+.nav-actions { display: flex; align-items: center; gap: 18px; white-space: nowrap; }
+.site-nav .nav-actions a { flex-shrink: 0; color: var(--link); }
+#about { display: grid; grid-template-columns: minmax(0, 1fr) 160px; column-gap: 32px; align-items: start; }
+.about-copy { min-width: 0; }
+.about-heading .affiliation { margin: 0; }
+.about-bio { margin-top: 20px; text-align: justify; hyphens: auto; }
+.portrait { display: block; width: 160px; height: auto; }
 .page { width: min(100% - 48px, 850px); margin: 48px auto 34px; }
 .page:focus { outline: none; }
 .page > section { margin: 0; }
 .page > section + section { margin-top: 38px; padding-top: 28px; border-top: 1px solid var(--line); }
-#about p:last-child { margin-bottom: 0; }
+.about-bio p:last-child { margin-bottom: 0; }
 .affiliation { margin-bottom: 20px; color: #555; }
 .interests { margin: 0; padding: 0; list-style: none; }
 .interests li { margin-bottom: 6px; }
@@ -74,9 +78,14 @@ h3 { margin: 0; font-size: 17px; line-height: 1.65; font-weight: 600; }
 .skip-link:focus { transform: translateY(0); }
 @media (max-width: 620px) {
   body { font-size: 15px; line-height: 1.7; }
-  .site-nav { width: calc(100% - 36px); gap: 18px; padding: 6px 0; }
-  .nav-sections { column-gap: 18px; }
-  .portrait { width: 140px; margin-left: 24px; }
+  .site-nav { width: calc(100% - 36px); gap: 16px; padding: 6px 0; }
+  .nav-sections { column-gap: 16px; }
+  .nav-actions { gap: 12px; }
+  #about { grid-template-columns: minmax(0, 1fr) 140px; column-gap: 24px; }
+  .about-copy { display: contents; }
+  .about-heading { grid-column: 1; grid-row: 1; }
+  .about-bio { grid-column: 1 / -1; grid-row: 2; text-align: left; hyphens: none; }
+  .portrait { grid-column: 2; grid-row: 1; width: 140px; }
   .site-nav a { font-size: 13px; min-height: 38px; }
   .page { width: calc(100% - 40px); margin-top: 27px; }
   h1 { font-size: 30px; }
@@ -86,7 +95,6 @@ h3 { margin: 0; font-size: 17px; line-height: 1.65; font-weight: 600; }
   .date { font-size: 13px; }
   .entry-heading .date { order: 2; }
   .affiliation { margin-bottom: 17px; font-size: 14px; }
-  .affiliation + p { clear: both; }
   .page > section + section { margin-top: 30px; padding-top: 24px; }
   .site-footer { margin-top: 30px; }
 }
@@ -103,7 +111,8 @@ h3 { margin: 0; font-size: 17px; line-height: 1.65; font-weight: 600; }
 }
 
 @media (max-width: 420px) {
-  .portrait { width: 104px; margin-left: 18px; }
+  #about { grid-template-columns: minmax(0, 1fr) 104px; column-gap: 18px; }
+  .portrait { width: 104px; }
 }
 
 .editor-example {
